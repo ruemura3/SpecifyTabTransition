@@ -72,6 +72,12 @@ class _TabBarDemoState extends State<TabBarDemo> with SingleTickerProviderStateM
   }
 
   @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: DefaultTabController(
